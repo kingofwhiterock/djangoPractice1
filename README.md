@@ -7,3 +7,6 @@ ISBN: 978-4-7980-6221-1
 
 ---
 In this repository, I make Blog Application based on chapter 4 of the book.
+
+---
+2020/11/30: 学習終了しました。
