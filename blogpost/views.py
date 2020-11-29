@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.urls import reverse_lazy
-from django.views.generic import ListView, DetailView, CreateView
+from django.views.generic import ListView, DetailView, CreateView, DeleteView
 from .models import BlogModel
 
 
@@ -19,4 +19,10 @@ class BlogCreateView(CreateView):
     template_name = 'create.html'
     model = BlogModel
     fields = ('title', 'content', 'category')
+    success_url = reverse_lazy('list')
+
+
+class BlogDeleteView(DeleteView):
+    template_name = 'delete.html'
+    model = BlogModel
     success_url = reverse_lazy('list')
