@@ -1,13 +1,17 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <title>DETAIL</title>
-</head>
-<body>
-{{ object.category }}
-{{ object.title }}
-{{ object.content }}
-{{ object.postdate }}
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block header %}
+{% endblock header %}
+
+{% block content %}
+<div class="container">
+    <div class="card">
+        <h5 class="card-header">{{ object.category }}</h5>
+        <div class="card-body">
+            <h5 class="card-title">{{ object.title }}</h5>
+            <p class="card-text">{{ object.content }}</p>
+            <a href="#" class="btn btn-primary">Button</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
